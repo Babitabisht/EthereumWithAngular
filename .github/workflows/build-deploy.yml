@@ -1,0 +1,53 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:  
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2
+      # with:
+      #   persist-credentials: false
+
+    - name : Trying to deploy with method -2 (Install and Build 🔧)
+      run :  | 
+        npm install
+        npm run-script deploy
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with: 
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: dist/clientPanel # The folder the action should deploy.
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: Babitabisht/clientPanel
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        regsitry: docker.pkg.github.com
+        dockerfile: Dockerfile
+        # snapshot: true
+
+  build-and-publish-latest:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' # Running this job only for master branch
+    steps:
+    - uses: actions/checkout@v2 # Checking out the repo
+
+    - name: Build and Publish latest Docker image
+      uses: VaultVulp/gp-docker-action@1.1.6
+      with: 
+        github-token: ${{ secrets.ACCESS_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
+        image-name: clientPanel # Provide only Docker image name, tag will be automatically set to latest
+        dockerfile: Dockerfile
