@@ -1,0 +1,460 @@
+{
+  "contractName": "hello_world",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getName",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"getName\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/babitabisht/myPros/ethereum/ethereum-test/contracts/hello_world.sol\":\"hello_world\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/babitabisht/myPros/ethereum/ethereum-test/contracts/hello_world.sol\":{\"keccak256\":\"0x740cb3a4e8f5104684bb89bd602365f45ea4b07e5bdaa7abc38bffdb7f97fe2d\",\"urls\":[\"bzz-raw://41eee91769acab4b5ed289dfcf1f905fbb3bd413c3dc482d9a81f4335f87f1f8\",\"dweb:/ipfs/QmYjGCvMaFrUQedJYmC4yE18czj4rXCMEXBjbLXLAdgMK5\"]}},\"version\":1}",
+  "bytecode": "0x60806040526064600055348015601457600080fd5b506087806100236000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806317d7de7c14602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b6000607b90509056fea265627a7a723158204014ddf904cdce8abeb4ef825d4e20e667e6261dfdef49f31ff8c51a4eab748c64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806317d7de7c14602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b6000607b90509056fea265627a7a723158204014ddf904cdce8abeb4ef825d4e20e667e6261dfdef49f31ff8c51a4eab748c64736f6c63430005100032",
+  "sourceMap": "66:142:2:-;;;101:3;90:14;;108:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;108:26:2;66:142;;;;;;",
+  "deployedSourceMap": "66:142:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:142:2;;;;;;;;;;;;;;;;;;;137:69;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;178:4;198:3;190:11;;137:69;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.8.0;\n\ncontract hello_world {\n uint  name=100;\n  constructor() public {\n  }\n\n function getName() public view returns ( uint ){\n    return  123;\n  }\n}\n",
+  "sourcePath": "/home/babitabisht/myPros/ethereum/ethereum-test/contracts/hello_world.sol",
+  "ast": {
+    "absolutePath": "/home/babitabisht/myPros/ethereum/ethereum-test/contracts/hello_world.sol",
+    "exportedSymbols": {
+      "hello_world": [
+        65
+      ]
+    },
+    "id": 66,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 49,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 65,
+        "linearizedBaseContracts": [
+          65
+        ],
+        "name": "hello_world",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 52,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 65,
+            "src": "90:14:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 50,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "90:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "313030",
+              "id": 51,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "101:3:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100_by_1",
+                "typeString": "int_const 100"
+              },
+              "value": "100"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 55,
+              "nodeType": "Block",
+              "src": "129:5:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 56,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "119:2:2"
+            },
+            "returnParameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:0:2"
+            },
+            "scope": 65,
+            "src": "108:26:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 63,
+              "nodeType": "Block",
+              "src": "184:22:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "313233",
+                    "id": 61,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "198:3:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_123_by_1",
+                      "typeString": "int_const 123"
+                    },
+                    "value": "123"
+                  },
+                  "functionReturnParameters": 60,
+                  "id": 62,
+                  "nodeType": "Return",
+                  "src": "190:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 64,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getName",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 57,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "153:2:2"
+            },
+            "returnParameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "178:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 58,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "178:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "176:8:2"
+            },
+            "scope": 65,
+            "src": "137:69:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 66,
+        "src": "66:142:2"
+      }
+    ],
+    "src": "32:177:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/babitabisht/myPros/ethereum/ethereum-test/contracts/hello_world.sol",
+    "exportedSymbols": {
+      "hello_world": [
+        65
+      ]
+    },
+    "id": 66,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 49,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 65,
+        "linearizedBaseContracts": [
+          65
+        ],
+        "name": "hello_world",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 52,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 65,
+            "src": "90:14:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 50,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "90:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "313030",
+              "id": 51,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "101:3:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_100_by_1",
+                "typeString": "int_const 100"
+              },
+              "value": "100"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 55,
+              "nodeType": "Block",
+              "src": "129:5:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 56,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "119:2:2"
+            },
+            "returnParameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:0:2"
+            },
+            "scope": 65,
+            "src": "108:26:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 63,
+              "nodeType": "Block",
+              "src": "184:22:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "313233",
+                    "id": 61,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "198:3:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_123_by_1",
+                      "typeString": "int_const 123"
+                    },
+                    "value": "123"
+                  },
+                  "functionReturnParameters": 60,
+                  "id": 62,
+                  "nodeType": "Return",
+                  "src": "190:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 64,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getName",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 57,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "153:2:2"
+            },
+            "returnParameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 64,
+                  "src": "178:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 58,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "178:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "176:8:2"
+            },
+            "scope": 65,
+            "src": "137:69:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 66,
+        "src": "66:142:2"
+      }
+    ],
+    "src": "32:177:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x91445961050638733E5da89Bdff707Ea80855321",
+      "transactionHash": "0x9aa0a3ec9bf8db1512d4bf4628ecace460b6fadd52710fb26102e5caf146e872"
+    }
+  },
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-11-07T04:16:52.583Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

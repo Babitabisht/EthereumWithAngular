@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 import { AccountComponent } from './components/account/account.component';
 import { BalanceComponent } from './components/balance/balance.component';
 import { TransferComponent } from './components/transfer/transfer.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountComponent,
     BalanceComponent,
-    TransferComponent
+    TransferComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

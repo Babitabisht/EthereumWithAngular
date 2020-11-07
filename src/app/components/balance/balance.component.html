@@ -1,9 +1,52 @@
 <div class="color">
-   
-<h3>Accounts: {{data}} </h3>
 
-<button class="btn btn-sm btn-primary" (click)="getBalance(data)">Get Balance</button>
-<h3>Balance:</h3>
-<p>{{this.balance}}</p>
+    <h3>Accounts: {{data}} </h3>
 
+    <button class="btn btn-sm btn-primary" (click)="getBalance(data)">Get Balance</button>
+    <h3>Balance:</h3>
+    <p>{{this.balance}}</p>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <p>Latest Block : {{latest.number}}</p>
+                    <p> Extra Data: {{latest.extraData}} </p>
+                    <p> Gas Limit : {{latest.gasLimit}} </p>
+                    <p> Gas Used : {{latest.gasUsed}} </p>
+                    <p> Hash : {{latest.hash}} </p>
+                    <p> Nonce : {{latest.nonce}}</p>
+                    <p> Number : {{latest.number}}</p>
+                    <p> Parent Hash : {{latest.parentHash}} </p>
+                   
+                    
+                    <p> Timestamp : {{latest.timestamp | date: 'dd/MM/yyyy'}} </p>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <p>Pending Block : {{pending.number}}</p>
+                    <p> Extra Data: {{pending.extraData}} </p>
+                    <p> Gas Limit : {{pending.gasLimit}} </p>
+                    <p> Gas Used : {{pending.gasUsed}} </p>
+                    <p> Hash : {{pending.hash}} </p>
+                    <p> Nonce : {{pending.nonce}}</p>
+                    <p> Number : {{pending.number}}</p>
+                    <p> Parent Hash : {{pending.parentHash}} </p>
+              
+                    <p> Timestamp : {{pending.timestamp | date: 'dd/MM/yyyy' }} </p>
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
+
+
+

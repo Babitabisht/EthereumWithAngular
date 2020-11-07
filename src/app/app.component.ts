@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   constructor(@Inject(WEB3) private web3: Web3) { }
   title = 'ethereum-test';
   appVersion;
+  your_provider
   public data: any;
 
   async ngOnInit() {
@@ -25,5 +26,8 @@ export class AppComponent implements OnInit {
   }
   updateData(event) {
     this.data = event;
+  }
+  changeProvider(){
+    
   }
 }
