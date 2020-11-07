@@ -1,26 +1,25 @@
-
 <div class="container">
   <div class="row">
     <div class="col-sm-12 bg-warning mt-3 mb-2">
-      <h1> You are connected to {{appVersion}}  </h1>
-     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <app-account  [data]="data" (onData)="updateData($event)"></app-account>
-      
-    </div>
-    <div class="col-sm-6">
-      <app-balance    [data]="data" (onData)="updateData($event)"></app-balance>
-    </div>
-   
+      <h1> You are connected to {{appVersion}} </h1>
+      connect to your provider
+      <input type="text" name="" id="" [(ngModel)]="your_provider" placeholder="Enter your provider" >
+      <input type="button" (click)="changeProvider()" value="change" class="btn btn-sm btn-warning">
+    </div>  
     
   </div>
-
   <div class="row">
     <div class="col-sm-6">
-      <app-transfer></app-transfer>
+      <app-account [data]="data" (onData)="updateData($event)"></app-account>
+
+    </div>
+    <div class="col-sm-6">
+      <app-balance [data]="data" (onData)="updateData($event)"></app-balance>
     </div>
   </div>
-
+  <div class="row">
+    <div class="col-sm-12">
+      <app-transfer [data]="data" (onData)="updateData($event)"></app-transfer>
+    </div>
+  </div>
 </div>

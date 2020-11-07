@@ -16,6 +16,9 @@ export class BalanceComponent implements OnInit {
   public onData: EventEmitter<any> = new EventEmitter<any>();
 
   balance;
+  latest;
+  pending;
+
   constructor(@Inject(WEB3) private web3: Web3,
   private web3Service:Web3Service
   ) { }
@@ -25,6 +28,9 @@ export class BalanceComponent implements OnInit {
     if ('enable' in this.web3.currentProvider) {
       await this.web3.currentProvider.enable();
     } */
+
+  this.latest= await this.web3Service.getBlock("latest");
+  this.pending = await this.web3Service.getBlock("pending");
 
   }
 
@@ -40,5 +46,7 @@ export class BalanceComponent implements OnInit {
   getBalance = async( _fromAddress)=>{
   this.balance=await   this.web3Service.getBalance(_fromAddress);
   }
+
+  
 
 }

@@ -1,1 +1,25 @@
-<p>transfer works!</p>
+<div  class="container mt-5">  
+    <h3>Transfer your funds from here!</h3>
+
+<input type="text" name="address"   [(ngModel)]="input_address"  placeholder="Enter Address">
+
+<input type="text" name="address"   [(ngModel)]="input_ethers" 
+placeholder="Enter ethers"
+>
+<button  class="btn btn-primary"  (click)="transfer()" > Transfer </button>
+
+    <div class="container"  >
+        <div class="card">
+            <div class="card-body">
+              <p>Block hash : {{result.blockHash}}  </p>
+              <p>Block Number : {{result.blockNumber}}    </p>
+              <p> Cumulative Gas Used : {{result.cumulativeGasUsed}}  </p>
+
+              <p> Gas Used : {{result.gasUsed}}  </p>
+              <p> Transaction Hash : {{result.transactionHash}} </p>
+            </div>
+          </div>
+
+    </div>
+
+</div>
